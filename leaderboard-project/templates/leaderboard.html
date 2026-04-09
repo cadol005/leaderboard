@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Leaderboard</title></head>
+<body>
+<h1>Leaderboard</h1>
+<table border="1">
+<tr><th>Rank</th><th>User</th><th>Wins</th></tr>
+{% for user in users %}
+<tr>
+<td>{{ loop.index }}</td>
+<td>{{ user["username"] }}</td>
+<td>{{ user["wins"] }}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
